@@ -46,7 +46,7 @@ def generate_text(model, tokenizer, seed_text, max_len, predict_next_words=2, te
 set_page_config('RNN Based Chatbot', layout='centered', initial_sidebar_state='expanded', page_icon='🤖')
 title('RNN Based Chatbot with Adjustable Metrics')
 
-with sidebar:  
+with sidebar:   # type: ignore
     info('This is a small scale RNN model based on the Shakespeare-Hamlet.\nYou can adjust the temperature, top K and top P of the model (Basically Fine Tuning)')
     temp = float(slider(label='Temperature (0.0 - 2.0)', min_value=0.0, max_value=2.0, value=1.0, step=0.01))
     topK_input = text_input(label='Top K', value="5")
