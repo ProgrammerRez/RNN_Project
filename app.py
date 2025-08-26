@@ -72,7 +72,7 @@ if user_input := chat_input(placeholder='Type Here'):
             generated_text = generate_text(
                 model=model,
                 tokenizer=tokenizer,
-                seed_text="Barnardo.",
+                seed_text=user_input,
                 max_len=model.input_shape[1] + 1,
                 predict_next_words=words,
                 temp=temp,
