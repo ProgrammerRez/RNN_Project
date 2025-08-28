@@ -68,6 +68,7 @@ if user_input := chat_input(placeholder='Type Here'):
     with chat_message('user'):
         markdown(user_input)
     with chat_message('assistant'):
+        
         with spinner('Thinking', show_time=True):
             generated_text = generate_text(
                 model=model,
